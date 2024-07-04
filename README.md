@@ -2,7 +2,7 @@
 
 This project demonstrates how to log SSL keys with Node.js. The keys are used to decrypt network traffic captured with Wireshark.
 
-## Prerequisites
+## Prerequisites
 
 - Node.js
 - npm
