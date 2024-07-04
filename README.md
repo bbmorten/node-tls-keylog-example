@@ -1,10 +1,8 @@
-# Project Notes
-
-## SSL Key Logging Example with Node.js
+# SSL Key Logging Example with Node.js
 
 This project demonstrates how to log SSL keys with Node.js. The keys are used to decrypt network traffic captured with Wireshark.
 
-### Prerequisites
+## Prerequisites
 
 - Node.js
 - npm
@@ -16,7 +14,7 @@ git clone https://github.com/bbmorten/node-tls-keylog-example.git
 cd node-tls-keylog-example
 ```
 
-### Installation
+## Installation
 
 Run the following command to install the dependencies:
 
@@ -24,7 +22,7 @@ Run the following command to install the dependencies:
 npm install
 ```
 
-### Usage
+## Usage
 
 Run the following command to start the application:
 
