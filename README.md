@@ -47,3 +47,8 @@ Find the stream ids (assuming 24,25,26) from the TCP headers and use the followi
 Do a File -> Export Specified Packets and save the packets to a file.
 
 Open the file in Wireshark and you should see the decrypted packets after you reference the `sslkeys.log` file in the TLS protocol preferences.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
