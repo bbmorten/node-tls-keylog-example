@@ -24,10 +24,26 @@ npm install
 
 ## Usage
 
+start wireshark and capture network traffic on the interface you are using to reach the Internet. Use the capture filter `tcp port 443` to filter out HTTP traffic.
+
+Use the display filter `tls.handshake.extensions_server_name in {"swapi.dev","jsonplaceholder.typicode.com"}`to filter out HTTPS traffic.
+
+
+
 Run the following command to start the application:
 
 ```shell
 NODE_OPTIONS="--tls-keylog=./sslkeys.log" node app > console.log
 ```
 
-Fetch and Axios requests' SSL keys are logged. Network traffic were captured with Wireshark and decrypted with the keys.
+SSL keys are logged to `sslkeys.log` in the current working directory.
+
+You'll see three Client Hello packets each of them belonging to a different TCP stream in the Wireshark window. 
+
+Find the stream ids (assuming 24,25,26) from the TCP headers and use the following display filter to filter out the packets from the stream:
+
+`tcp.stream in {24,25,26}`
+
+Do a File -> Export Specified Packets and save the packets to a file.
+
+Open the file in Wireshark and you should see the decrypted packets after you reference the `sslkeys.log` file in the TLS protocol preferences.
