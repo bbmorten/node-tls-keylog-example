@@ -14,7 +14,7 @@ git clone https://github.com/bbmorten/node-tls-keylog-example.git
 cd node-tls-keylog-example
 ```
 
-## Installation
+## Installation
 
 Run the following command to install the dependencies:
 
@@ -22,7 +22,7 @@ Run the following command to install the dependencies:
 npm install
 ```
 
-## Usage
+## Usage
 
 Run the following command to start the application:
 
